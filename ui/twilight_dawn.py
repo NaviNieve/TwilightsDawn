@@ -9,7 +9,7 @@ from tkinterdnd2 import TkinterDnD, DND_FILES
 from modules.updater import check_for_updates_async
 from ui.dark_about_modal import show_dark_about_popup
 
-CURRENT_VERSION = "v1.0.0"
+CURRENT_VERSION = "v1.0.1"
 
 class TwilightDawnUI(TkinterDnD.Tk):
     def __init__(self, manager):
@@ -78,7 +78,6 @@ class TwilightDawnUI(TkinterDnD.Tk):
         try:
             self.drop_target_register(DND_FILES)
             self.dnd_bind("<<Drop>>", handle_secure_dropped_file_payload)
-            print("[+] Safe tkinterdnd2 Drag-and-Drop listener engine bound successfully!")
         except Exception as e:
             print(f"[-] DND initialization deferred or missing package binaries: {e}")
 
@@ -117,7 +116,6 @@ class TwilightDawnUI(TkinterDnD.Tk):
 
         self.bind("<Control-v>", process_clipboard_file_paste)
         self.bind("<Control-V>", process_clipboard_file_paste)
-        print("[+] Clipboard-integrated keyboard shortcut file ingestion engine successfully initialized.")
 
         self.initialize_welcome_dashboard_screen()
 
