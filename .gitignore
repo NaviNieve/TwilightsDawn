@@ -1,0 +1,14 @@
+configs/
+dumper/map_files/
+database_new.py
+spyer.py
+note.txt
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.idea/
+build/
+dist/
+*.manifest
+*.spec
